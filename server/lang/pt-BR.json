@@ -1,25 +1,20 @@
 {
-    "moblet": {
-        "label": "Cartão de Fidelidade",
-        "hint": "Crie um cartão de fidelidade para seus clientes",
-        "description": "Preencha os campos abaixo para criar o cartão de fidelidade"
-    },
-    "password": {
-        "label": "Senha",
-        "hint": "Insira uma senha de 4 caracteres",
-        "placeholder": "1423"
-    },
-    "description": {
-        "label": "Descrição do cartão",
-        "hint": "Este é o texto que ficará no topo do seu cartão",
-        "placeholder": "Almoce 9 vezes e a 10ª é grátis"
-    },
-    "quantity": {
-        "label": "Quantidade",
-        "hint": "Escolha a quantidade de selos para se obter o prêmio",
-        "default": "Escolha uma quantidade",
-        "value_3": "3 carimbos",
-        "value_6": "6 carimbos",
-        "value_9": "9 carimbos"
-    }
+  "moblet": {
+    "label": "Moblet Base",
+    "hint": "Crie uma 'descrição do seu moblet' para seus clientes",
+    "description": "Preencha os campos abaixo para criar o 'o que seu moblet faz'"
+  },
+  "first_field": {
+    "label": "Nome do primeiro campo",
+    "hint": "De uma dica para o usuário",
+    "placeholder": "placeholder aqui"
+  },
+  "second_field": {
+    "label": "Nome do segundo campo",
+    "hint": "De uma dica para o usuário sobre o select",
+    "default": "Escolha uma opção",
+    "value_3": "opção 3",
+    "value_6": "opção 6",
+    "value_9": "opção 9"
+  }
 }
