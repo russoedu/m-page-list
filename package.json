@@ -1,24 +1,25 @@
 {
-  "name": "m-moblet-base",
+  "name": "m-list",
   "version": "1.0.0",
-  "description": "This is an empty moblet example created for Moblets and FabApp.",
+  "description": "This is a list moblet for Moblets and FabApp. You can use it as base to create a new one.",
   "main": "Feed.js",
   "scripts": {
     "test": "jasmine"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:moblets/m-moblet-base.git"
+    "url": "git+https://github.com/moblets/m-list.git"
   },
   "author": "Eduardo Russo",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/fabappteam/fidelity-card#readme",
+  "homepage": "https://github.com/moblets/m-list.git",
   "devDependencies": {},
   "keywords": [
     "example",
     "base",
     "Moblet",
     "Moblets",
-    "FabApp"
+    "FabApp",
+    "list"
   ]
 }

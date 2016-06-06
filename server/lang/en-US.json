@@ -1,20 +1,26 @@
 {
   "moblet": {
-    "label": "Base Moblet",
-    "hint": "Create a 'your moblet description' to your customers",
-    "description": "Fill out the form below to create 'what your moblet does'"
+    "label": "Content list",
+    "hint": "Create a list of rich text content",
+    "description": "Fill the fields below to create a list of content"
   },
-  "first_field": {
-    "label": "First field label",
-    "hint": "Give the users a hint",
-    "placeholder": "placeholder here"
+  "locations": {
+    "label": "Content list",
+    "hint": "Insert the content",
+    "list_button": "Add itens"
   },
-  "second_field": {
-    "label": "Second field label",
-    "hint": "Give the users a hint about the select",
-    "default": "Select an option",
-    "value_3": "option 3",
-    "value_6": "option 6",
-    "value_9": "option 9"
+  "title": {
+    "label": "Title",
+    "hint": "Content title",
+    "placeholder": "My content"
+  },
+  "image": {
+    "label": "Image",
+    "hint": "Choose an image to the content header and list icon"
+  },
+  "description": {
+    "label": "Content",
+    "hint": "Fill the content with HTML using the text editor",
+    "placeholder": "<h1>My content</h1>\n<p>Here is the content</p>"
   }
 }

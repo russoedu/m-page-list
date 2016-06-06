@@ -1,37 +1,44 @@
 {
   "fields": [
     {
-      "name": "channel",
-      "type": "text",
-      "placeholder": "channel_placeholder",
-      "min-length": 3,
-      "max-length": 255,
-      "required": true
+      "name": "items",
+      "type": "list",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "required": true,
+          "min-length": 1,
+          "max-length": 30
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "required": true,
+          "min-width": 1024,
+          "max-width": 4096,
+          "wh-proportion": 1.28
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": true,
+          "min-length": 3
+        }
+      ]
     },
     {
-      "name": "videos",
+      "name": "style",
       "type": "select",
       "required": true,
-      "placeholder": "videos_list_placeholder",
-      "values": {
-        "upload": "upload",
-        "favorites": "favorites",
-        "playlist": "playlist",
-      },
-      "on-change": {
-        "before" : {
-          "playlist": "hide"
-        },
-        "playlist": {
-          "playlist": "show"
-        }
+      "fields": {
+        "1": "type_1",
+        "2": "type_2",
+        "3": "type_3",
+        "4": "type_4",
+        "5": "type_5",
+        "6": "type_6"
       }
-    },
-    {
-      "name": "playlist",
-      "type": "select",
-      "placeholder": "playlist_list_placeholder",
-      "values": "getChannelPlaylists(channel)"
     }
   ]
 }

@@ -1,20 +1,26 @@
 {
   "moblet": {
-    "label": "Moblet Base",
-    "hint": "Crie uma 'descrição do seu moblet' para seus clientes",
-    "description": "Preencha os campos abaixo para criar o 'o que seu moblet faz'"
+    "label": "Lista de conteúdo",
+    "hint": "Crie uma lista de conteúdos ricos",
+    "description": "Preencha os campos abaixo para criar a lista de conteúdos"
   },
-  "first_field": {
-    "label": "Nome do primeiro campo",
-    "hint": "De uma dica para o usuário",
-    "placeholder": "placeholder aqui"
+  "locations": {
+    "label": "Lista de conteúdos",
+    "hint": "Insira os conteúdos",
+    "list_button": "Adicionar itens"
   },
-  "second_field": {
-    "label": "Nome do segundo campo",
-    "hint": "De uma dica para o usuário sobre o select",
-    "default": "Escolha uma opção",
-    "value_3": "opção 3",
-    "value_6": "opção 6",
-    "value_9": "opção 9"
+  "title": {
+    "label": "Título",
+    "hint": "Título do conteúdo",
+    "placeholder": "O meu conteúdo"
+  },
+  "image": {
+    "label": "Imagem",
+    "hint": "Escolha uma imagem para o cabeçalho do conteúdo e o ícone da lista"
+  },
+  "description": {
+    "label": "Conteúdo",
+    "hint": "Preencha com o conteúdo em HTML usando o editor de texto",
+    "placeholder": "<h1>Meu conteúdo</h1>\n<p>Aqui está o conteúdo</p>"
   }
 }

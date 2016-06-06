@@ -1,8 +1,3 @@
-var feed = function(data) {
-  return {
-    data: "RAW data from the moblet logic"
-  };
-
+module.exports = function(data) {
+  return data;
 };
-
-module.exports = feed;
