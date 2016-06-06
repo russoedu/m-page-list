@@ -1,21 +1,37 @@
 {
   "fields": [
     {
-      "name": "first_field",
+      "name": "channel",
       "type": "text",
+      "placeholder": "channel_placeholder",
       "min-length": 3,
       "max-length": 255,
       "required": true
     },
     {
-      "name": "second_field",
+      "name": "videos",
       "type": "select",
+      "required": true,
+      "placeholder": "videos_list_placeholder",
       "values": {
-        "0": "value_3",
-        "1": "value_6",
-        "2": "value_9"
+        "upload": "upload",
+        "favorites": "favorites",
+        "playlist": "playlist",
       },
-      "required": true
+      "on-change": {
+        "before" : {
+          "playlist": "hide"
+        },
+        "playlist": {
+          "playlist": "show"
+        }
+      }
+    },
+    {
+      "name": "playlist",
+      "type": "select",
+      "placeholder": "playlist_list_placeholder",
+      "values": "getChannelPlaylists(channel)"
     }
   ]
 }
