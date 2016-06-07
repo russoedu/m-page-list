@@ -1,3 +1,6 @@
 <u-moblet is-loading="isLoading" init="init" inner-scroll="true">
-  <pre>{{data}}</pre>
+  <div class="item" ng-repeat="(key, item) in data.items">
+    <h1 ng-bind="item.title"></h1>
+    <span ng-bind-html="item.description"></span>
+  </div>
 </u-moblet>

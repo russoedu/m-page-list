@@ -25,6 +25,9 @@ module.exports = {
       $mDataLoader.load($scope.moblet, false, options)
         .then(function(data) {
           // Put the data from the feed in the $scope object
+          for (var i = 0; i < data.items.length; i++) {
+            data.items[i].description = unescape(data.items[i].description);
+          }
           $scope.data = data;
         });
     };
