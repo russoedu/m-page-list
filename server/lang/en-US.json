@@ -14,10 +14,6 @@
     "hint": "Content title",
     "placeholder": "My content"
   },
-  "image": {
-    "label": "Image",
-    "hint": "Choose an image to the content header and list icon"
-  },
   "description": {
     "label": "Content",
     "hint": "Fill the content with HTML using the text editor",

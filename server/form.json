@@ -12,14 +12,6 @@
           "max-length": 30
         },
         {
-          "name": "image",
-          "type": "image",
-          "required": true,
-          "min-width": 1024,
-          "max-width": 4096,
-          "wh-proportion": 1.28
-        },
-        {
           "name": "description",
           "type": "text",
           "required": true,

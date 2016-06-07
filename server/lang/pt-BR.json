@@ -4,7 +4,7 @@
     "hint": "Crie uma lista de conteúdos ricos",
     "description": "Preencha os campos abaixo para criar a lista de conteúdos"
   },
-  "locations": {
+  "items": {
     "label": "Lista de conteúdos",
     "hint": "Insira os conteúdos",
     "list_button": "Adicionar itens"
@@ -14,13 +14,20 @@
     "hint": "Título do conteúdo",
     "placeholder": "O meu conteúdo"
   },
-  "image": {
-    "label": "Imagem",
-    "hint": "Escolha uma imagem para o cabeçalho do conteúdo e o ícone da lista"
-  },
   "description": {
     "label": "Conteúdo",
     "hint": "Preencha com o conteúdo em HTML usando o editor de texto",
     "placeholder": "<h1>Meu conteúdo</h1>\n<p>Aqui está o conteúdo</p>"
+  },
+  "style": {
+    "label": "Estilo da lista",
+    "hint": "Escolha o estilo da lista de conteúdos",
+    "placeholder": "Escolha um estilo",
+    "type_1": "",
+    "type_2": "",
+    "type_3": "",
+    "type_4": "",
+    "type_5": "",
+    "type_6": ""
   }
 }
