@@ -1,4 +1,4 @@
-require('./m-moblet-base.scss');
+require('./m-simple-list.scss');
 var path = require('path'),
   fs = require('fs');
 
@@ -11,7 +11,7 @@ angular.module('uMoblets')
         moblet: "=",
         data: "="
       },
-      template: fs.readFileSync(path.join(__dirname, 'm-moblet-base.html'), 'utf8'),
+      template: fs.readFileSync(path.join(__dirname, 'm-simple-list.html'), 'utf8'),
       link: function() {},
       controller: function($scope, $loading, $ionicPopup, $uAlert, $filter) {}
     };
