@@ -23,11 +23,11 @@
     "label": "Estilo da lista",
     "hint": "Escolha o estilo da lista de conteúdos",
     "placeholder": "Escolha um estilo",
-    "type_1": "",
-    "type_2": "",
-    "type_3": "",
-    "type_4": "",
-    "type_5": "",
-    "type_6": ""
+    "type_1": "Tipo 1",
+    "type_2": "Tipo 2",
+    "type_3": "Tipo 3",
+    "type_4": "Tipo 4",
+    "type_5": "Tipo 5",
+    "type_6": "Tipo 6"
   }
 }
