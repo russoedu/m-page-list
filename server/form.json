@@ -23,7 +23,7 @@
       "name": "style",
       "type": "select",
       "required": true,
-      "fields": {
+      "values": {
         "1": "type_1",
         "2": "type_2",
         "3": "type_3",
