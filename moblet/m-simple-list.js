@@ -10,22 +10,19 @@ module.exports = {
   link: function() {},
   controller: function(
     $scope,
-    $uMoblet,
-    $uFeedLoader,
-    $filter,
-    $ionicScrollDelegate,
-    $uAlert,
-    $timeout
+    $mMoblet,
+    $mDataLoader,
+    $filter
   ) {
     var init = function() {
       $scope.isLoading = true;
-      $scope.moblet = $uMoblet.load();
+      $scope.moblet = $mMoblet.load();
       var options = {
         offset: 1,
         items: 25,
-        itemsArray: "locations"
+        itemsArray: "items"
       };
-      $uFeedLoader.load($scope.moblet, options, false)
+      $mDataLoader.load($scope.moblet, false, options)
         .then(function(data) {
           // Put the data from the feed in the $scope object
           $scope.data = data;

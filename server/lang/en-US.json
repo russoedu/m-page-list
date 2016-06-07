@@ -7,7 +7,7 @@
   "locations": {
     "label": "Content list",
     "hint": "Insert the content",
-    "list_button": "Add itens"
+    "list_button": "Add items"
   },
   "title": {
     "label": "Title",
@@ -18,5 +18,16 @@
     "label": "Content",
     "hint": "Fill the content with HTML using the text editor",
     "placeholder": "<h1>My content</h1>\n<p>Here is the content</p>"
+  },
+  "style": {
+    "label": "List style",
+    "hint": "Choose the content list style",
+    "placeholder": "Choose a style",
+    "type_1": "Type 1",
+    "type_2": "Type 2",
+    "type_3": "Type 3",
+    "type_4": "Type 4",
+    "type_5": "Type 5",
+    "type_6": "Type 6"
   }
 }
