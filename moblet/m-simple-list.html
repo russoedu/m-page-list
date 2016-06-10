@@ -1,9 +1,18 @@
-<m-moblet is-loading="isLoading" init="init" inner-scroll="true" unavaliable="error">
-  <!-- m-content is a Moblets directive that adas reload and auto scrolling -->
-  <m-content reload="load" more="more">
-    <div class="item list-item" ng-repeat="(key, item) in items" ng-click="goTo(item.id)">
-      <h2 ng-bind="item.title"></h2>
-      <span class="no-style" ng-bind-html="item.description"></span>
+<m-moblet is-loading="isLoading" inner-scroll="true" unavaliable="error">
+  <m-content class="detail" init="init" ng-if="isDetail">
+    <div class="content-container">
+        <h2 class="title" ng-bind="item.title"></h2>
+        <p class="descriptionitem" u-bind-html="item.description"></p>
+    </div>
+  </m-content>
+  <m-content init="init" ng-if="!isDetail" reload="load" more="more">
+    <div class="item list-item layout-1" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
+      <div class="line-clamp-2 module title-module">
+        <h2 ng-bind="item.title"></h2>
+      </div>
+      <div class="line-clamp-2 module">
+        <span class="no-style" ng-bind-html="item.description"></span>
+      </div>
     </div>
   </m-content>
 </m-moblet>

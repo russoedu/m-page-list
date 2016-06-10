@@ -19,15 +19,26 @@
     "hint": "Fill the content with HTML using the text editor",
     "placeholder": "<h1>My content</h1>\n<p>Here is the content</p>"
   },
-  "style": {
+  "listStyle": {
     "label": "List style",
     "hint": "Choose the content list style",
     "placeholder": "Choose a style",
-    "type_1": "Type 1",
-    "type_2": "Type 2",
-    "type_3": "Type 3",
-    "type_4": "Type 4",
-    "type_5": "Type 5",
-    "type_6": "Type 6"
+    "list_type_1": "Type 1",
+    "list_type_2": "Type 2",
+    "list_type_3": "Type 3",
+    "list_type_4": "Type 4",
+    "list_type_5": "Type 5",
+    "list_type_6": "Type 6"
+  },
+  "itemStyle": {
+    "label": "Item style",
+    "hint": "Choose the content style",
+    "placeholder": "Choose a style",
+    "item_type_1": "Type 1",
+    "item_type_2": "Type 2",
+    "item_type_3": "Type 3",
+    "item_type_4": "Type 4",
+    "item_type_5": "Type 5",
+    "item_type_6": "Type 6"
   }
 }

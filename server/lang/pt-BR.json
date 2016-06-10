@@ -19,15 +19,26 @@
     "hint": "Preencha com o conteúdo em HTML usando o editor de texto",
     "placeholder": "<h1>Meu conteúdo</h1>\n<p>Aqui está o conteúdo</p>"
   },
-  "style": {
+  "listStyle": {
     "label": "Estilo da lista",
     "hint": "Escolha o estilo da lista de conteúdos",
     "placeholder": "Escolha um estilo",
-    "type_1": "Tipo 1",
-    "type_2": "Tipo 2",
-    "type_3": "Tipo 3",
-    "type_4": "Tipo 4",
-    "type_5": "Tipo 5",
-    "type_6": "Tipo 6"
+    "list_type_1": "Tipo 1",
+    "list_type_2": "Tipo 2",
+    "list_type_3": "Tipo 3",
+    "list_type_4": "Tipo 4",
+    "list_type_5": "Tipo 5",
+    "list_type_6": "Tipo 6"
+  },
+  "itemStyle": {
+    "label": "Estilo da item",
+    "hint": "Escolha o estilo do conteúdos",
+    "placeholder": "Escolha um estilo",
+    "item_type_1": "Tipo 1",
+    "item_type_2": "Tipo 2",
+    "item_type_3": "Tipo 3",
+    "item_type_4": "Tipo 4",
+    "item_type_5": "Tipo 5",
+    "item_type_6": "Tipo 6"
   }
 }

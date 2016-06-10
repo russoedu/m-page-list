@@ -20,16 +20,29 @@
       ]
     },
     {
-      "name": "style",
+      "name": "listStyle",
       "type": "select",
       "required": true,
       "values": {
-        "1": "type_1",
-        "2": "type_2",
-        "3": "type_3",
-        "4": "type_4",
-        "5": "type_5",
-        "6": "type_6"
+        "1": "list_type_1",
+        "2": "list_type_2",
+        "3": "list_type_3",
+        "4": "list_type_4",
+        "5": "list_type_5",
+        "6": "list_type_6"
+      }
+    },
+    {
+      "name": "itemStyle",
+      "type": "select",
+      "required": true,
+      "values": {
+        "1": "item_type_1",
+        "2": "item_type_2",
+        "3": "item_type_3",
+        "4": "item_type_4",
+        "5": "item_type_5",
+        "6": "item_type_6"
       }
     }
   ]
