@@ -24,12 +24,8 @@
       "type": "select",
       "required": true,
       "values": {
-        "1": "list_type_1",
-        "2": "list_type_2",
-        "3": "list_type_3",
-        "4": "list_type_4",
-        "5": "list_type_5",
-        "6": "list_type_6"
+        "layout-1": "list_type_1",
+        "layout-2": "list_type_2",
       }
     },
     {
@@ -37,12 +33,8 @@
       "type": "select",
       "required": true,
       "values": {
-        "1": "item_type_1",
-        "2": "item_type_2",
-        "3": "item_type_3",
-        "4": "item_type_4",
-        "5": "item_type_5",
-        "6": "item_type_6"
+        "layout-1": "item_type_1",
+        "layout-2": "item_type_2",
       }
     }
   ]

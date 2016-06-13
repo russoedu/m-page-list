@@ -1,183 +1,69 @@
 m-simple-list{
   .emptyList{
       width:100%;
-      height: 100%;  //Arrumar isso depois
+      height: 100%;
       background-color: #fff;
       text-align: center;
       padding-top: 70%;
   }
-  .no-style {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .layout-1 {
+    
   }
-  .no-style, .no-style > * {
-    font-size: 14px;
-    font-weight: normal;
-    display: inline;
+  .layout-2 {
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    margin: 10px;
   }
-  .card {
-    margin:10px 10px;
-    small {
-      font-size: 12px;
-      line-height: 1.4;
-      color: #666;
+  .list {
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    margin-bottom: 20px;
+    :last-child {
+      margin-bottom: 0;
     }
-    span {
-      font-size: 15px;
-      line-height: 1.4;
-      color: #333;
-    }
-    // twitter_hashtag
-    &.layout-twitterhashtag {
-      .item-avatar{
-        display: table-cell;
-        img {
-          border-radius: 10%;
-          height: 40px;
-          width: 40px;
-          top:16px;
-          left: 16px;
-        }
-      }
-      h2 {
-        font-weight: bold;
+    .item {
+      padding: 10px 12px 0 12px;
+      height: 96px;
+      min-height: 96px;
+      h1 {
+        font-size: 14px;
+        font-weight: 700;
         text-overflow: inherit;
+        line-height: 1.3em;
         white-space: normal;
-        margin: 0 0 0 0;
-        font-size: 15px;
-        line-height: 1.4;
       }
-    }
-    //twitter
-    &.layout-twitter {
-      .date{
-        padding-top: 10px;
-        padding-bottom: 8px;
+      p {
+        font-size: 14px;
+        line-height: 1.3em;
+        color: #333;
+        white-space: normal;
       }
-    }
-    //facebook
-    &.layout-facebook {
-      .description-container {
-        padding-top: 8px;
+      div {
+        display: -webkit-box;
+        -webkit-line-clamp:2;
+        -webkit-box-orient: vertical;
+        max-height: 2.6em; /* exactly two lines */
+        height: auto;
+        max-height: 2.6em;
       }
     }
   }
-	.list-item {
-    padding-top: 10px;
-    padding-bottom: 0;
-    padding-right: 12px;
-    height: 96px;
-    min-height: 96px;
-    .item-img,  .m-image-loader-container{
-      position: absolute;
-      top:12px;
-      left:12px;
-      width:114px;
-      height: 70px;
-      max-width: 114px;
-      max-height: 70px;
-      overflow: hidden;
+  .detail {
+    position: relative;
+    padding: 16px;
+    background-color: white;
+    h1 {
+      font-size: 17px;
+      line-height: 1.4;
     }
     h2 {
-      font-weight: 700;
-      text-overflow: inherit;
-      white-space: normal;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    h3, h4, h5, h6 {
       font-size: 14px;
-      line-height: 1.3em;
+      line-height: 1.4;
     }
-    p {
-      font-size: 14px;
-      line-height: 1.3em;
-      color: #333;
-      white-space: normal;
-    }
-    .module {
-      font-size: 14px;
-      width: 100%;
-      margin: 0 0 0 0;
-      overflow: hidden;
-      &.title-module {
-        margin-bottom: 2px;
-      }
-      h2{
-        margin: 0;
-      }
-      p {
-        margin: 0;
-      }
-    }
-    .line-clamp-1 {
-      display: -webkit-box;
-      -webkit-line-clamp:1;
-      -webkit-box-orient: vertical;
-      max-height: 1.3em; /* exactly two lines */
-      height: auto;
-      h2{
-        max-height: 1.3em;
-      }
-      p {
-        max-height: 1.3em;
-      }
-    }
-    .line-clamp-2 {
-      display: -webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient: vertical;
-      max-height: 2.6em; /* exactly two lines */
-      height: auto;
-      h2{
-        max-height: 2.6em;
-      }
-      p {
-        max-height: 2.6em;
-      }
-    }
-    .line-clamp-4 {
-      display: -webkit-box;
-      -webkit-line-clamp:4;
-      -webkit-box-orient: vertical;
-      max-height: 5.2em; /* exactly two lines */
-      height: auto;
-      p {
-        max-height: 5.2em;
-      }
-    }
-		&.layout-0 {
-      padding-left: 12px;
-		}
-		&.layout-1 {
-      padding-left: 12px;
-		}
-    &.layout-2 {
-      padding-left: 138px;
-		}
-		&.layout-3 {
-      padding-left: 138px;
-		}
-		&.layout-4 {
-      padding-left: 138px;
-		}
-		&.layout-5 {
-      padding-left: 138px;
-      h3 {
-        font-size: 13px;
-        font-weight: bold;
-        color: #008000;
-        position: absolute;
-        bottom:10px;
-        right:12px;
-      }
-		}
-    &.layout-6 {
-      padding-left: 12px;
-      padding: 8px 12px;
-      min-height: 30px;
-      height: 34px;
-      h2 {
-        font-size: 14px;
-        font-weight: bold;
-      }
-    }
-	}
+  }
 }

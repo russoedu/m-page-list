@@ -16,7 +16,8 @@ module.exports = {
     $filter,
     $timeout,
     $state,
-    $stateParams
+    $stateParams,
+    $sanitize
   ) {
     var dataLoadOptions;
     var list = {
@@ -71,7 +72,7 @@ module.exports = {
         var itemIndex = _.findIndex($scope.items, function(item) {
           return item.id.toString() === $stateParams.detail;
         });
-        $scope.item = $scope.items[itemIndex];
+        $scope.detail = $scope.items[itemIndex];
       },
       /**
        * Load data from the Moblets backend:
@@ -93,7 +94,9 @@ module.exports = {
         // used by the "showDetail" function
         $mDataLoader.load($scope.moblet, dataLoadOptions)
           .then(function(data) {
-            list.setView(data)
+            $scope.listStyle = data.listStyle;
+            $scope.itemStyle = data.itemStyle;
+            list.setView(data);
           }
         );
       },
@@ -123,7 +126,7 @@ module.exports = {
        * - run list.load function
        */
       /*
-        TODO
+       * TODO go to detail if url is called
        */
       init: function() {
         dataLoadOptions = {
@@ -136,13 +139,17 @@ module.exports = {
         $scope.load = list.load;
         $scope.load(true);
       }
-    }
+    };
 
     var listItem = {
-      goTo: function(item) {
-        $stateParams.detail = item.id;
+      goTo: function(detail) {
+        $stateParams.detail = detail.id;
         $state.go('moblet', $stateParams);
       }
+    };
+
+    $scope.stripHtml = function(str) {
+      return str.replace(/<[^>]+>/ig, "");
     };
 
     $scope.load = list.load;

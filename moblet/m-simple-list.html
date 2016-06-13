@@ -1,17 +1,19 @@
 <m-moblet is-loading="isLoading" inner-scroll="true" unavaliable="error">
-  <m-content class="detail" init="init" ng-if="isDetail">
-    <div class="content-container">
-        <h2 class="title" ng-bind="item.title"></h2>
-        <p class="descriptionitem" u-bind-html="item.description"></p>
+  <m-content init="init" ng-if="isDetail">
+    <div class="detail">
+        <h1 class="title" ng-bind="detail.title"></h1>
+        <div class="description" u-bind-html="detail.description"></div>
     </div>
   </m-content>
   <m-content init="init" ng-if="!isDetail" reload="load" more="more">
-    <div class="item list-item layout-1" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
-      <div class="line-clamp-2 module title-module">
-        <h2 ng-bind="item.title"></h2>
-      </div>
-      <div class="line-clamp-2 module">
-        <span class="no-style" ng-bind-html="item.description"></span>
+    <div class="list">
+      <div class="item layout-1" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
+        <div>
+          <h1 ng-bind="item.title"></h1>
+        </div>
+        <div>
+          <p ng-bind="stripHtml(item.description)"></p>
+        </div>
       </div>
     </div>
   </m-content>
