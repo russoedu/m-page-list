@@ -25,7 +25,7 @@
       "required": true,
       "values": {
         "layout-1": "list_type_1",
-        "layout-2": "list_type_2",
+        "layout-2": "list_type_2"
       }
     },
     {
@@ -34,7 +34,7 @@
       "required": true,
       "values": {
         "layout-1": "item_type_1",
-        "layout-2": "item_type_2",
+        "layout-2": "item_type_2"
       }
     }
   ]
