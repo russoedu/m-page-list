@@ -3,6 +3,7 @@
     {
       "name": "items",
       "type": "list",
+      "has-details": true,
       "fields": [
         {
           "name": "title",

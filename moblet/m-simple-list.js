@@ -16,8 +16,8 @@ module.exports = {
     $filter,
     $timeout,
     $state,
-    $stateParams,
-    $sanitize
+    $stateParams
+    // $sanitize
   ) {
     var dataLoadOptions;
     var list = {
@@ -72,7 +72,18 @@ module.exports = {
         var itemIndex = _.findIndex($scope.items, function(item) {
           return item.id.toString() === $stateParams.detail;
         });
-        $scope.detail = $scope.items[itemIndex];
+        if (itemIndex === -1) {
+          dataLoadOptions = {
+            offset: $scope.items === undefined ? 0 : $scope.items.length,
+            items: 25,
+            cache: false
+          };
+          list.load(false, function() {
+            list.showDetail();
+          });
+        } else {
+          $scope.detail = $scope.items[itemIndex];
+        }
       },
       /**
        * Load data from the Moblets backend:
@@ -86,10 +97,12 @@ module.exports = {
        * @param  {boolean} showLoader Boolean to determine if the page loader
        * is active
        */
-      load: function(showLoader) {
+      load: function(showLoader, callback) {
         $scope.isLoading = showLoader || false;
         // Reset the pagination
-        dataLoadOptions.offset = 0;
+        if (showLoader === true || showLoader === undefined) {
+          dataLoadOptions.offset = 0;
+        }
         // mDataLoader also saves the response in the local cache. It will be
         // used by the "showDetail" function
         $mDataLoader.load($scope.moblet, dataLoadOptions)
@@ -97,6 +110,9 @@ module.exports = {
             $scope.listStyle = data.listStyle;
             $scope.itemStyle = data.itemStyle;
             list.setView(data);
+            if (typeof callback === 'function') {
+              callback();
+            }
           }
         );
       },
@@ -132,6 +148,7 @@ module.exports = {
         dataLoadOptions = {
           offset: 0,
           items: 25,
+          listKey: 'items',
           cache: ($stateParams.detail !== "")
         };
 
