@@ -62,7 +62,7 @@ module.exports = {
        * @return {boolean} True if the view must show a detail.
        */
       isDetail: function() {
-        return $stateParams.detail !== "" || $scope.items.length === 1;
+        return $stateParams.detail !== "";
       },
       /**
        * Show the detail getting the index from $stateParams.detail. Set "item"
@@ -107,8 +107,6 @@ module.exports = {
         // used by the "showDetail" function
         $mDataLoader.load($scope.moblet, dataLoadOptions)
           .then(function(data) {
-            $scope.listStyle = data.listStyle;
-            $scope.itemStyle = data.itemStyle;
             list.setView(data);
             if (typeof callback === 'function') {
               callback();
