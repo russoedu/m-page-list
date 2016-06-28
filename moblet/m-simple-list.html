@@ -5,7 +5,7 @@
         <div class="description" u-bind-html="detail.description"></div>
     </div>
   </m-content>
-  <m-content init="init" ng-if="!isDetail" reload="load" more="more">
+  <m-content init="init" ng-if="!isDetail" reload="load">
     <div class="list">
       <div class="item {{ listStyle }}" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
         <div>
