@@ -11,12 +11,12 @@ module.exports = {
   controller: function(
     $scope,
     $rootScope,
-    $mMoblet,
-    $mDataLoader,
     $filter,
     $timeout,
     $state,
-    $stateParams
+    $stateParams,
+    $mMoblet,
+    $mDataLoader
     // $sanitize
   ) {
     var dataLoadOptions;
