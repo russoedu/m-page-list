@@ -164,7 +164,7 @@ module.exports = {
     };
 
     $scope.stripHtml = function(str) {
-      return str.replace(/<[^>]+>/ig, "");
+      return str.replace(/<[^>]+>/ig, " ");
     };
 
     $scope.load = list.load;

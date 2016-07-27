@@ -14,7 +14,7 @@
         },
         {
           "name": "description",
-          "type": "text-area",
+          "type": "rich-text",
           "required": true,
           "min-length": 3
         }

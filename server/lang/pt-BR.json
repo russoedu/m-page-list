@@ -23,22 +23,14 @@
     "label": "Estilo da lista",
     "hint": "Escolha o estilo da lista de conteúdos",
     "placeholder": "Escolha um estilo",
-    "list_type_1": "Tipo 1",
-    "list_type_2": "Tipo 2",
-    "list_type_3": "Tipo 3",
-    "list_type_4": "Tipo 4",
-    "list_type_5": "Tipo 5",
-    "list_type_6": "Tipo 6"
+    "list_type_1": "Lista padrão",
+    "list_type_2": "Lista cartão"
   },
   "itemStyle": {
     "label": "Estilo do item",
     "hint": "Escolha o estilo do conteúdos",
     "placeholder": "Escolha um estilo",
-    "item_type_1": "Tipo 1",
-    "item_type_2": "Tipo 2",
-    "item_type_3": "Tipo 3",
-    "item_type_4": "Tipo 4",
-    "item_type_5": "Tipo 5",
-    "item_type_6": "Tipo 6"
+    "item_type_1": "Detalhe padrão",
+    "item_type_2": "Detalhe cartão"
   }
 }
