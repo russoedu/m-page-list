@@ -1,7 +1,7 @@
 /* eslint no-undef: [0]*/
 module.exports = {
   title: "mSimpleList",
-  style: "m-simple-list.scss",
+  style: "m-simple-list.less",
   template: 'm-simple-list.html',
   i18n: {
     pt: "lang/pt-BR.json",
@@ -15,7 +15,6 @@ module.exports = {
     $timeout,
     $state,
     $stateParams,
-    $mMoblet,
     $mDataLoader
     // $sanitize
   ) {
@@ -96,6 +95,7 @@ module.exports = {
        * 	 - dataLoadOptions - An object with parameters for pagination
        * @param  {boolean} showLoader Boolean to determine if the page loader
        * is active
+       * @param {function} callback Callback
        */
       load: function(showLoader, callback) {
         $scope.isLoading = showLoader || false;
@@ -135,7 +135,6 @@ module.exports = {
       },
       /**
        * Initiate the list moblet:
-       * - Create a moblet with $mMoblet.load()
        * - put the list.load function in the $scope
        * - run list.load function
        */
@@ -150,7 +149,6 @@ module.exports = {
           cache: ($stateParams.detail !== "")
         };
 
-        $scope.moblet = $mMoblet.load();
         $scope.load = list.load;
         $scope.load(true);
       }
