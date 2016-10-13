@@ -29,6 +29,7 @@ module.exports = {
       setView: function(data, more) {
         if (isDefined(data)) {
           $scope.error = false;
+          $scope.emptyData = false;
           $scope.listStyle = data.listStyle;
           $scope.itemStyle = data.itemStyle;
 
@@ -42,6 +43,7 @@ module.exports = {
           $scope.more = (data.hasMoreItems) ? list.more : undefined;
         } else {
           $scope.error = true;
+          $scope.emptyData = true;
         }
         // Broadcast complete refresh and infinite scroll
         $rootScope.$broadcast('scroll.refreshComplete');
