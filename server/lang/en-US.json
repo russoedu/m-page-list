@@ -1,6 +1,6 @@
 {
   "moblet": {
-    "label": "Content list",
+    "label": "Pro content list",
     "hint": "Create a list of rich text content",
     "description": "Fill the fields below to create a list of content"
   },
@@ -17,7 +17,7 @@
   "description": {
     "label": "Content",
     "hint": "Fill the content with HTML using the text editor",
-    "placeholder": "<h1>My content</h1>\n<p>Here is the content</p>"
+    "placeholder": "My content\nHere is the content"
   },
   "listStyle": {
     "label": "List style",

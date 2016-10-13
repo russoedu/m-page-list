@@ -1,6 +1,6 @@
 {
   "moblet": {
-    "label": "Lista de conteúdo",
+    "label": "Lista de texto pro",
     "hint": "Crie uma lista de conteúdos ricos",
     "description": "Preencha os campos abaixo para criar a lista de conteúdos"
   },
@@ -17,7 +17,7 @@
   "description": {
     "label": "Conteúdo",
     "hint": "Preencha com o conteúdo em HTML usando o editor de texto",
-    "placeholder": "<h1>Meu conteúdo</h1>\n<p>Aqui está o conteúdo</p>"
+    "placeholder": "Meu conteúdo\nAqui está o conteúdo"
   },
   "listStyle": {
     "label": "Estilo da lista",

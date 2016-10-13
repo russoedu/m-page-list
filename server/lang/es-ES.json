@@ -1,36 +1,36 @@
 {
   "moblet": {
-    "label": "Content list",
-    "hint": "Create a list of rich text content",
-    "description": "Fill the fields below to create a list of content"
+    "label": "Lista de texto Pro",
+    "hint": "Crear una lista de contenido de texto enriquecido",
+    "description": "Rellene los campos a continuación para crear una lista de contenido"
   },
   "locations": {
-    "label": "Content list",
-    "hint": "Insert the content",
-    "list_button": "Add items"
+    "label": "Lista de contenido",
+    "hint": "Insertar el contenido",
+    "list_button": "Añadir artículos"
   },
   "title": {
-    "label": "Title",
-    "hint": "Content title",
-    "placeholder": "My content"
+    "label": "Título",
+    "hint": "Título del contenido",
+    "placeholder": "Mi contenido"
   },
   "description": {
-    "label": "Content",
-    "hint": "Fill the content with HTML using the text editor",
-    "placeholder": "<h1>My content</h1>\n<p>Here is the content</p>"
+    "label": "Contenido",
+    "hint": "Llenar el contenido utilizando el editor de texto",
+    "placeholder": "El contenido\n Aquí es el contenido"
   },
   "listStyle": {
-    "label": "List style",
-    "hint": "Choose the content list style",
-    "placeholder": "Choose a style",
-    "list_type_1": "Default list",
-    "list_type_2": "Card list"
+    "label": "Estilo de lista",
+    "hint": "Elija el estilo de lista del contenido",
+    "placeholder": "Elija un estilo",
+    "list_type_1": "Lista estándar",
+    "list_type_2": "Lista de tarjetas"
   },
   "itemStyle": {
-    "label": "Item style",
-    "hint": "Choose the content style",
-    "placeholder": "Choose a style",
-    "item_type_1": "Default detail",
-    "item_type_2": "Card detail"
+    "label": "Estilo de contenido",
+    "hint": "Elija el estilo del contenido",
+    "placeholder": "Elija un estilo",
+    "item_type_1": "Contenido estándar",
+    "item_type_2": "Contenido de tarjeta"
   }
 }
