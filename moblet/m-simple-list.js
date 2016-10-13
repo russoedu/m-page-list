@@ -159,7 +159,7 @@ module.exports = {
     var listItem = {
       goTo: function(detail) {
         $stateParams.detail = detail.id;
-        $state.go('moblet', $stateParams);
+        $state.go('pages', $stateParams);
       }
     };
 
