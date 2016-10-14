@@ -1,5 +1,5 @@
 {
-  "name": "m-simple-list",
+  "name": "m-list",
   "version": "1.0.0",
   "description": "This is a simple list moblet for Moblets and FabApp. You can use it as base to create a new one.",
   "main": "server/feed.js",
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moblets/m-simple-list.git"
+    "url": "git+https://github.com/moblets/m-list.git"
   },
   "author": "Eduardo Russo",
   "license": "MIT",
-  "homepage": "https://github.com/moblets/m-simple-list.git",
+  "homepage": "https://github.com/moblets/m-list.git",
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.6",
     "eslint": "^2.8.0",
