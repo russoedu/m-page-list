@@ -12,6 +12,11 @@
           "min-length": 1,
           "max-length": 30
         },
+				{
+          "name": "image",
+          "type": "image",
+          "required": true
+        },
         {
           "name": "description",
           "type": "rich-text",

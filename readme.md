@@ -1,5 +1,5 @@
 
-# Simple List - moblet example
+# List - moblet example
 
 This is a moblet example created for Moblets. Developers can use this moblet to better understand how to create their own.
 
