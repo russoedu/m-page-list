@@ -3,7 +3,7 @@
     <div class="list">
       <div class="item {{ listStyle }}" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
 				<div class="img-container">
-					<img ng-src="{{(item.image) | mEncoder:'crop'}}" img-resize />
+					<img ng-src="{{(item.image) | mEncoder:'crop'}}" />
 				</div>
         <div>
           <h1 ng-bind="item.title"></h1>
