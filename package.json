@@ -1,7 +1,7 @@
 {
   "name": "m-list",
   "version": "1.0.0",
-  "description": "This is a simple list moblet for Moblets and FabApp. You can use it as base to create a new one.",
+  "description": "This is a list moblet for Moblets and FabApp. You can use it as base to create a new one.",
   "main": "server/feed.js",
   "scripts": {
     "test": "jasmine"
