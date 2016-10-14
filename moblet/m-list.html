@@ -3,7 +3,7 @@
     <div class="list">
       <div class="item {{ listStyle }}" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
 				<div class="img-container">
-					<img ng-src="{{(item.image) | mEncoder:'crop'}}" />
+					<img style="width:100%;" m-image-loader ng-src="{{(item.image)}}" img-resize>
 				</div>
         <div>
           <h1 ng-bind="item.title"></h1>
@@ -19,21 +19,3 @@
     </div>
   </m-content>
 </m-moblet>
-
-
-<div class="item item-thumbnail-left list-item layout-4" ng-class="{'layout-4':(i.layout == 4)}" ng-if="i.layout == 4 &amp;&amp; mobletType != 'twitter_hashtag' &amp;&amp; mobletType != 'twitter' &amp;&amp; mobletType != 'facebook'" ng-click="goTo(i.id)">
-
-    <div class="img-container">
-      <img class="item-img" m-image-loader="" m-image-loader-height="70" m-image-loader-width="114" ng-src="https://media.dev.universo.mobi/image.php?crop=true&amp;size=114x70&amp;url=http%3A%2F%2Funiverso-dev-a-m.s3-website-us-east-1.amazonaws.com%2F6ea67764394672b04406413c592f21ca901fb02d" src="https://media.dev.universo.mobi/image.php?crop=true&amp;size=114x70&amp;url=http%3A%2F%2Funiverso-dev-a-m.s3-website-us-east-1.amazonaws.com%2F6ea67764394672b04406413c592f21ca901fb02d">
-    </div>
-
-
-    <div class="line-clamp-2 module title-module">
-      <h2 ng-bind="i.title" class="ng-binding">Desculpe</h2>
-    </div>
-
-    <div class="line-clamp-2 module">
-      <p ng-bind="i.description" class="ng-binding">Merda nanhuma</p>
-    </div>
-
-</div>
