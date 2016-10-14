@@ -3,7 +3,7 @@
     <div class="list">
       <div class="item {{ listStyle }}" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
 				<div class="img-container">
-					<img style="width:100%;" m-image-loader ng-src="{{(item.image)}}" img-resize>
+					<img m-image-loader ng-src="{{(item.image)}}" img-resize>
 				</div>
         <div>
           <h1 ng-bind="item.title"></h1>
@@ -14,6 +14,7 @@
   </m-content>
   <m-content init="init" ng-if="isDetail">
     <div class="detail {{ itemStyle }}">
+			<img ng-src="{{detail.image}}" >
       <h1 class="title" ng-bind="detail.title"></h1>
       <div class="description" m-bind-html="detail.description"></div>
     </div>
