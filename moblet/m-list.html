@@ -13,8 +13,8 @@
     </div>
   </m-content>
   <m-content init="init" ng-if="isDetail">
+		<img class="full-width-image" ng-src="{{detail.image}}" >
     <div class="detail {{ itemStyle }}">
-			<img ng-src="{{detail.image}}" >
       <h1 class="title" ng-bind="detail.title"></h1>
       <div class="description" m-bind-html="detail.description"></div>
     </div>
