@@ -32,6 +32,9 @@ module.exports = {
           $scope.listStyle = data.listStyle;
           $scope.itemStyle = data.itemStyle;
 
+          $scope.isCard = data.listStyle === "layout-2";
+          $scope.isList = data.listStyle === "layout-1";
+
           // If it was called from the "more" function, concatenate the items
           $scope.items = (more) ? $scope.items.concat(data.items) : data.items;
 

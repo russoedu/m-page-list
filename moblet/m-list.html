@@ -2,13 +2,16 @@
   <m-content reload="load" more="more" >
     <div class="list" ng-if="!isDetail">
       <div class="item {{ listStyle }}" class="list" ng-repeat="(key, item) in items" ng-click="goTo(item)">
-				<div class="img-container">
+				<div class="img-container" ng-if="isList">
 					<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
 				</div>
-        <div>
-          <h1 ng-bind="item.title"></h1>
-					<p ng-bind-html="stripHtml(item.description)"></p>
-        </div>
+      
+        <h1 ng-bind="item.title"></h1>
+				<p ng-bind-html="stripHtml(item.description)"></p>
+  
+        <div class="img-container" ng-if="isCard">
+					<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
+				</div>
       </div>
     </div>
     <img class="full-width-image" ng-src="{{detail.image}}" ng-if="isDetail" >
