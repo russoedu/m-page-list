@@ -7,7 +7,7 @@
 				</div>
         <div>
           <h1 ng-bind="item.title"></h1>
-					<p ng-bind="stripHtml(item.description)"></p>
+					<p ng-bind-html="stripHtml(item.description)"></p>
         </div>
       </div>
     </div>
