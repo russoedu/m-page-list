@@ -6,7 +6,7 @@
       <!-- CARD STYLE -->
       <div ng-if="isCard" class="item style-card" ng-repeat="(key, item) in items"
            ng-click="goTo(item)">
-        <h1 ng-bind="item.title" class="m-theme-text-color m-theme-border-color-bottom"></h1>
+        <h1 ng-bind="item.title"></h1>
 				<p ng-bind-html="stripHtml(item.description) | mCut:100"></p>
 				<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
       </div>
@@ -16,7 +16,7 @@
 				<div class="img-container" ng-if="isList">
 					<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
 				</div>
-        <h1 ng-bind="item.title" class="m-theme-text-color"></h1>
+        <h1 ng-bind="item.title"></h1>
 				<p ng-bind-html="stripHtml(item.description) | mCut:40"></p>
       </div>
     </div>
