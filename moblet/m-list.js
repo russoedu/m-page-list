@@ -42,6 +42,11 @@ module.exports = {
           $scope.noContent = $scope.items === undefined ||
                              $scope.items.length === 0;
 
+          // set empty itens if no content
+          if ($scope.noContent) {
+            $scope.items = [];
+          }
+
           // Check if the page is loading the list or a detail
           $scope.isDetail = list.isDetail();
 
