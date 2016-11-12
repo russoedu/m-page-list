@@ -32,12 +32,20 @@ module.exports = {
           $scope.listStyle = data.listStyle;
           $scope.itemStyle = data.itemStyle;
 
+          $scope.isCard = data.listStyle === "layout-2";
+          $scope.isList = data.listStyle === "layout-1";
+
           // If it was called from the "more" function, concatenate the items
           $scope.items = (more) ? $scope.items.concat(data.items) : data.items;
 
           // Set "noContent" if the items lenght = 0
           $scope.noContent = $scope.items === undefined ||
                              $scope.items.length === 0;
+
+          // set empty itens if no content
+          if ($scope.noContent) {
+            $scope.items = [];
+          }
 
           // Check if the page is loading the list or a detail
           $scope.isDetail = list.isDetail();
@@ -54,7 +62,10 @@ module.exports = {
         $rootScope.$broadcast('scroll.infiniteScrollComplete');
 
         // If the view is showing the detail, call showDetail
-        if ($scope.isDetail) {
+        if ($scope.items.length === 1) {
+          $scope.isDetail = true;
+          list.showDetail(0);
+        } else if ($scope.isDetail) {
           list.showDetail();
         }
 
@@ -73,21 +84,25 @@ module.exports = {
        * Show the detail getting the index from $stateParams.detail. Set "item"
        * to the selected detail
        */
-      showDetail: function() {
-        var itemIndex = _.findIndex($scope.items, function(item) {
-          return item.id.toString() === $stateParams.detail;
-        });
-        if (itemIndex === -1) {
-          dataLoadOptions = {
-            offset: $scope.items === undefined ? 0 : $scope.items.length,
-            items: 25,
-            cache: false
-          };
-          list.load(false, function() {
-            list.showDetail();
+      showDetail: function(detailIndex) {
+        if (isDefined($stateParams.detail) && $stateParams.detail !== "") {
+          var itemIndex = _.findIndex($scope.items, function(item) {
+            return item.id.toString() === $stateParams.detail;
           });
-        } else {
-          $scope.detail = $scope.items[itemIndex];
+          if (itemIndex === -1) {
+            dataLoadOptions = {
+              offset: $scope.items === undefined ? 0 : $scope.items.length,
+              items: 25,
+              cache: false
+            };
+            list.load(false, function() {
+              list.showDetail();
+            });
+          } else {
+            $scope.detail = $scope.items[itemIndex];
+          }
+        } else if (isDefined(detailIndex)) {
+          $scope.detail = $scope.items[detailIndex];
         }
       },
       /**
@@ -154,8 +169,6 @@ module.exports = {
           listKey: 'items',
           cache: ($stateParams.detail !== "")
         };
-
-        $scope.load = list.load;
         $scope.load(true);
       }
     };
@@ -172,6 +185,7 @@ module.exports = {
     };
 
     $scope.load = list.load;
+    $scope.init = list.init;
     $scope.goTo = listItem.goTo;
     list.init();
   }
