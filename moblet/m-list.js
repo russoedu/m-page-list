@@ -29,7 +29,6 @@ module.exports = {
         if (isDefined(data)) {
           $scope.error = false;
           $scope.emptyData = false;
-          $scope.listStyle = data.listStyle;
           $scope.itemStyle = data.itemStyle;
 
           $scope.isCard = data.listStyle === "layout-2";
