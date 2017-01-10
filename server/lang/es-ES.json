@@ -2,7 +2,7 @@
   "moblet": {
     "label": "Lista pro",
     "hint": "Crear una lista de contenido de texto enriquecido",
-    "description": "Rellene los campos a continuación para crear una lista de contenido"
+    "description": "Rellene los campos para crear una lista de contenido"
   },
   "locations": {
     "label": "Lista de contenido",

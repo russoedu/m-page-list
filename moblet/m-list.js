@@ -29,7 +29,6 @@ module.exports = {
         if (isDefined(data)) {
           $scope.error = false;
           $scope.emptyData = false;
-          $scope.listStyle = data.listStyle;
           $scope.itemStyle = data.itemStyle;
 
           $scope.isCard = data.listStyle === "layout-2";
@@ -99,6 +98,7 @@ module.exports = {
               list.showDetail();
             });
           } else {
+            $stateParams.pageTitle = $scope.items[itemIndex].title;
             $scope.detail = $scope.items[itemIndex];
           }
         } else if (isDefined(detailIndex)) {
@@ -163,6 +163,7 @@ module.exports = {
        * TODO go to detail if url is called
        */
       init: function() {
+        $stateParams.pageTitle = null;
         dataLoadOptions = {
           offset: 0,
           items: 25,
