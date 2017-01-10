@@ -39,11 +39,11 @@ module.exports = {
           $scope.items = (more) ? $scope.items.concat(data.items) : data.items;
 
           // Set "noContent" if the items lenght = 0
-          $scope.noContent = $scope.items === undefined ||
+          $scope.moblet.noContent = $scope.items === undefined ||
                              $scope.items.length === 0;
 
           // set empty itens if no content
-          if ($scope.noContent) {
+          if ($scope.moblet.noContent) {
             $scope.items = [];
           }
 
@@ -70,7 +70,7 @@ module.exports = {
         }
 
         // Remove the loading animation
-        $scope.isLoading = false;
+        $scope.moblet.isLoading = false;
       },
       /**
        * Check if the view is showing a detail or the list. The function checks
@@ -119,7 +119,7 @@ module.exports = {
        * @param {function} callback Callback
        */
       load: function(showLoader, callback) {
-        $scope.isLoading = showLoader || false;
+        $scope.moblet.isLoading = showLoader || false;
         // Reset the pagination
         if (showLoader === true || showLoader === undefined) {
           dataLoadOptions.offset = 0;
@@ -170,6 +170,9 @@ module.exports = {
           cache: ($stateParams.detail !== "")
         };
         $scope.load(true);
+        $scope.reload = function() {
+          list.load();
+        };
       }
     };
 
