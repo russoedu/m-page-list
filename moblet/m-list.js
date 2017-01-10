@@ -13,7 +13,7 @@ module.exports = {
     $rootScope,
     $filter,
     $timeout,
-    $state,
+    $mState,
     $stateParams,
     $mDataLoader
   ) {
@@ -179,7 +179,9 @@ module.exports = {
     var listItem = {
       goTo: function(detail) {
         $stateParams.detail = detail.id;
-        $state.go('pages', $stateParams);
+        $mState.go('u-moblets', 'page', {
+          detail: detail.id
+        });
       }
     };
 
