@@ -18,7 +18,8 @@
 					<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
 				</div>
         <h1 ng-bind="item.title"></h1>
-				<p ng-bind-html="stripHtml(item.description) | mCut:60"></p>
+				<p ng-bind="item.resume" ng-if="item.resume"></p>
+				<p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>
       </div>
     </div>
     <!-- Detail -->

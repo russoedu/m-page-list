@@ -32,7 +32,7 @@ module.exports = {
           $scope.itemStyle = data.itemStyle;
 
           $scope.isCard = data.listStyle === "layout-2";
-          $scope.isList = data.listStyle === "layout-1";
+          $scope.isList = isDefined(data.listStyle) ? data.listStyle === "layout-1" : true;
 
           // If it was called from the "more" function, concatenate the items
           $scope.items = (more) ? $scope.items.concat(data.items) : data.items;
@@ -187,8 +187,7 @@ module.exports = {
     };
 
     $scope.stripHtml = function(str) {
-      return str;
-      // .replace(/<[^>]+>/ig, " ");
+      return str.replace(/<[^>]+>/ig, " ");
     };
 
     $scope.load = list.load;
