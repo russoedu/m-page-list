@@ -9,13 +9,14 @@
         <h1 ng-bind="item.title"></h1>
         <p ng-bind="item.resume" ng-if="item.resume"></p>
 				<p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>
-				<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
+				<!--<m-img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>-->
+          <m-img encode="true" src="item.image"></m-img>
       </div>
       <!-- LIST ITEM -->
       <div ng-if="isList" class="item style-list" ng-repeat="(key, item) in items"
            ng-click="goTo(item)">
 				<div class="img-container" ng-if="isList">
-					<img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>
+					<m-img encode="true" src="item.image"></m-img>
 				</div>
         <h1 ng-bind="item.title"></h1>
 				<p ng-bind="item.resume" ng-if="item.resume"></p>
@@ -24,7 +25,7 @@
     </div>
     <!-- Detail -->
     <div class="detail m-theme-null-background {{ itemStyle }}" ng-if="isDetail">
-      <m-img class="full-width-image" url="{{detail.image}}"></m-img>
+      <m-img class="full-width-image-{{ itemStyle }}" url="{{detail.image}}"></m-img>
       <div class="detail-container">
         <h1 class="title" ng-bind="detail.title"></h1>
         <div class="description" m-bind-html="detail.description"></div>
