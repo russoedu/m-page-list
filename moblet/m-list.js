@@ -168,7 +168,7 @@ module.exports = {
           offset: 0,
           items: 25,
           listKey: 'items',
-          cache: ($stateParams.detail !== "")
+          cache: false
         };
         $scope.load(true);
         $scope.reload = function() {
