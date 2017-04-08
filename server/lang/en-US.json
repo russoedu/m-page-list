@@ -1,13 +1,13 @@
 {
   "moblet": {
-    "label": "Pro list",
-    "hint": "Create a list of rich text content",
-    "description": "Fill the fields below to create a list of content"
+    "label": "Site list",
+    "hint": "Create a list of web pages",
+    "description": "Fill the fields below to create a list of web pages"
   },
   "locations": {
-    "label": "Content list",
-    "hint": "Insert the content",
-    "list_button": "Add items"
+    "label": "Page list",
+    "hint": "Insert the pages",
+    "list_button": "Add pages"
   },
   "title": {
     "label": "Title",
@@ -15,27 +15,13 @@
     "placeholder": "My title"
   },
   "resume": {
-    "label": "Descrição",
-    "hint": "Descrição do item",
-    "placeholder": "Minha descrição"
+    "label": "Description",
+    "hint": "Page description",
+    "placeholder": "My page description"
   },
-  "description": {
-    "label": "Content",
-    "hint": "Fill the content with HTML using the text editor",
-    "placeholder": "My content"
-  },
-  "listStyle": {
-    "label": "List style",
-    "hint": "Choose the content list style",
-    "placeholder": "Choose a style",
-    "list_type_1": "Default list",
-    "list_type_2": "Card list"
-  },
-  "itemStyle": {
-    "label": "Item style",
-    "hint": "Choose the content style",
-    "placeholder": "Choose a style",
-    "item_type_1": "Default detail",
-    "item_type_2": "Card detail"
+  "url": {
+    "label": "URL",
+    "hint": "Fill with the page URL",
+    "placeholder": "https://www.mypage.com"
   }
 }

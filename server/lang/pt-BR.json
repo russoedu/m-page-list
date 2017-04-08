@@ -1,41 +1,27 @@
 {
   "moblet": {
-    "label": "Lista pro",
-    "hint": "Crie uma lista de conteúdos ricos",
-    "description": "Preencha os campos abaixo para criar a lista de conteúdos"
+    "label": "Lista de Páginas",
+    "hint": "Crie uma lista de páginas web",
+    "description": "Preencha os campos abaixo para criar a lista de páginas web"
   },
   "items": {
-    "label": "Lista de conteúdos",
-    "hint": "Insira os conteúdos",
-    "list_button": "Adicionar itens"
+    "label": "Lista de páginas",
+    "hint": "Insira as páginas",
+    "list_button": "Adicionar páginas"
   },
   "title": {
     "label": "Título",
-    "hint": "Título do conteúdo",
+    "hint": "Título da página",
     "placeholder": "Meu título"
   },
   "resume": {
     "label": "Descrição",
-    "hint": "Descrição do item",
-    "placeholder": "Minha descrição"
+    "hint": "Descrição da página",
+    "placeholder": "Minha descrição da página"
   },
-  "description": {
-    "label": "Conteúdo",
-    "hint": "Preencha com o conteúdo em HTML usando o editor de texto",
-    "placeholder": "Meu conteúdo"
-  },
-  "listStyle": {
-    "label": "Estilo da lista",
-    "hint": "Escolha o estilo da lista de conteúdos",
-    "placeholder": "Escolha um estilo",
-    "list_type_1": "Lista padrão",
-    "list_type_2": "Lista cartão"
-  },
-  "itemStyle": {
-    "label": "Estilo do item",
-    "hint": "Escolha o estilo do conteúdos",
-    "placeholder": "Escolha um estilo",
-    "item_type_1": "Detalhe padrão",
-    "item_type_2": "Detalhe cartão"
+  "url": {
+    "label": "URL",
+    "hint": "Preencha com a URL da página web",
+    "placeholder": "https://www.minhapagina.com.br"
   }
 }
