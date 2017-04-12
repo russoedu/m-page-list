@@ -8,23 +8,31 @@
            ng-click="goTo(item)">
         <h1 ng-bind="item.title"></h1>
         <p ng-bind="item.resume" ng-if="item.resume"></p>
-				<p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>
-				<!--<m-img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>-->
+        <p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>
+        <!--<m-img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>-->
           <m-img encode="true" src="item.image"></m-img>
       </div>
       <!-- LIST ITEM -->
       <div ng-if="isList" class="item style-list" ng-repeat="(key, item) in items"
            ng-click="goTo(item)">
-				<div class="img-container" ng-if="isList">
-					<m-img encode="true" src="item.image"></m-img>
-				</div>
+        <div class="img-container" ng-if="isList">
+          <m-img encode="true" src="item.image"></m-img>
+        </div>
         <h1 ng-bind="item.title"></h1>
-				<p ng-bind="item.resume" ng-if="item.resume"></p>
+        <p ng-bind="item.resume" ng-if="item.resume"></p>
       </div>
     </div>
     <!-- Detail -->
-    <u-frame-directive trustedurl="detail.url"></div>
-      </div>
+    <div ng-if="isDetail" class="iframe-container">
+      <!-- <u-frame-directive trustedurl="detail"> -->
+				<!-- data-tap-disabled="true" -->
+				<iframe
+	      ng-src="{{ trustedUrl }}"
+	      scrolling="yes"
+	      id="form"
+	      >
+      </iframe>
+    </div>
     </div>
   <!--</m-content>
 </m-moblet>-->

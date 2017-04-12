@@ -15,7 +15,8 @@ module.exports = {
     $timeout,
     $mState,
     $stateParams,
-    $mDataLoader
+    $mDataLoader,
+		$sce
   ) {
     var dataLoadOptions;
     var list = {
@@ -84,6 +85,7 @@ module.exports = {
        * to the selected detail
        */
       showDetail: function(detailIndex) {
+        console.log(detailIndex, $stateParams.detail);
         if (isDefined($stateParams.detail) && $stateParams.detail !== "") {
           var itemIndex = _.findIndex($scope.items, function(item) {
             return item.id.toString() === $stateParams.detail;
@@ -100,9 +102,15 @@ module.exports = {
           } else {
             $stateParams.pageTitle = $scope.items[itemIndex].title;
             $scope.detail = $scope.items[itemIndex];
+            $scope.trustedUrl = $sce.trustAsResourceUrl($scope.detail.url);
+            console.log($scope.detail.url);
+	          console.log($scope.trustedUrl);
           }
         } else if (isDefined(detailIndex)) {
           $scope.detail = $scope.items[detailIndex];
+          $scope.trustedUrl = $sce.trustAsResourceUrl($scope.detail.url);
+          console.log($scope.detail.url);
+          console.log($scope.trustedUrl);
         }
       },
       /**
