@@ -13,10 +13,16 @@ module.exports = {
     $rootScope,
     $filter,
     $timeout,
+    $mAppDef,
     $mState,
+    $mWebview,
     $stateParams,
+    $mPageDef,
+    $mPlatform,
     $mDataLoader,
-		$sce
+    $cordovaNetwork,
+    $state,
+    $sce
   ) {
     var dataLoadOptions;
     var list = {
@@ -30,10 +36,6 @@ module.exports = {
         if (isDefined(data)) {
           $scope.error = false;
           $scope.emptyData = false;
-          $scope.itemStyle = data.itemStyle;
-
-          $scope.isCard = data.listStyle === "layout-2";
-          $scope.isList = isDefined(data.listStyle) ? data.listStyle === "layout-1" : true;
 
           // If it was called from the "more" function, concatenate the items
           $scope.items = (more) ? $scope.items.concat(data.items) : data.items;
@@ -62,10 +64,7 @@ module.exports = {
         $rootScope.$broadcast('scroll.infiniteScrollComplete');
 
         // If the view is showing the detail, call showDetail
-        if ($scope.items.length === 1) {
-          $scope.isDetail = true;
-          list.showDetail(0);
-        } else if ($scope.isDetail) {
+        if ($scope.isDetail) {
           list.showDetail();
         }
 
@@ -78,14 +77,20 @@ module.exports = {
        * @return {boolean} True if the view must show a detail.
        */
       isDetail: function() {
-        return $stateParams.detail !== "";
+        var isDetail = false;
+        if ($scope.items.length === 1) {
+          $stateParams.detail = data.items[0].id;
+          isDetail = true;
+        } else if ($stateParams.detail !== "") {
+          isDetail = true;
+        }
+        return isDetail;
       },
       /**
        * Show the detail getting the index from $stateParams.detail. Set "item"
        * to the selected detail
        */
-      showDetail: function(detailIndex) {
-        console.log(detailIndex, $stateParams.detail);
+      showDetail: function() {
         if (isDefined($stateParams.detail) && $stateParams.detail !== "") {
           var itemIndex = _.findIndex($scope.items, function(item) {
             return item.id.toString() === $stateParams.detail;
@@ -99,18 +104,27 @@ module.exports = {
             list.load(false, function() {
               list.showDetail();
             });
+          // } else if ($mPlatform.isWebView()) {
+          //   $scope.detail = $scope.items[itemIndex];
+          //   var id = $stateParams.pageId;
+          //   var url = $scope.detail.url;
+          //   var colors = $mAppDef.color();
+          //   var page = $mPageDef(id).page();
+          //   console.log(page);
+          //   var params = $stateParams;
+          //   params.detail = '';
+          //
+          //   $scope.isWebView = true;
+          //   $mWebview.open(id, url, "_web", undefined, page.name,
+          //       colors.navigation_color, colors.header_color, $filter('translate')("loading"), false, {
+          //         state: $state.current.name,
+          //         params: params
+          //       });
           } else {
-            $stateParams.pageTitle = $scope.items[itemIndex].title;
+            $scope.title = $scope.items[itemIndex].title;
             $scope.detail = $scope.items[itemIndex];
-            $scope.trustedUrl = $sce.trustAsResourceUrl($scope.detail.url);
-            console.log($scope.detail.url);
-	          console.log($scope.trustedUrl);
+            $scope.detail.url = $sce.trustAsResourceUrl($scope.detail.url);
           }
-        } else if (isDefined(detailIndex)) {
-          $scope.detail = $scope.items[detailIndex];
-          $scope.trustedUrl = $sce.trustAsResourceUrl($scope.detail.url);
-          console.log($scope.detail.url);
-          console.log($scope.trustedUrl);
         }
       },
       /**
@@ -171,7 +185,7 @@ module.exports = {
        * TODO go to detail if url is called
        */
       init: function() {
-        $stateParams.pageTitle = null;
+        $scope.title = null;
         dataLoadOptions = {
           offset: 0,
           items: 25,
@@ -187,10 +201,24 @@ module.exports = {
 
     var listItem = {
       goTo: function(detail) {
-        $stateParams.detail = detail.id;
-        $mState.go('u-moblets', 'page', {
-          detail: detail.id
-        });
+        if ($mPlatform.isWebView()) {
+          var id = $stateParams.pageId;
+          var url = detail.url;
+          var colors = $mAppDef.color();
+          var name = detail.title;
+          var params = $stateParams;
+          $mWebview.open(id, url, "_web", undefined, name,
+              colors.navigation_color, colors.header_color, $filter('translate')("loading"), false, {
+                state: $state.current.name,
+                params: params
+              });
+        } else {
+          console.log(detail);
+          $stateParams.detail = detail.id;
+          $mState.go('u-moblets', 'page', {
+            detail: detail.id
+          });
+        }
       }
     };
 

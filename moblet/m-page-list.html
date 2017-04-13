@@ -1,38 +1,18 @@
-<!--<m-moblet init="init"  is-loading="isLoading" inner-scroll="true" no-content="noContent" unavaliable="error">
-  <m-content reload="load" more="more" >-->
-    <!-- LIST -->
-    <div class="list" ng-if="!isDetail">
+<!-- LIST -->
+<div class="list" ng-if="!isDetail">
+  <div class="item style-list" ng-repeat="(key, item) in items"
+       ng-click="goTo(item)">
+    <div class="img-container">
+      <m-img encode="true" src="item.image"></m-img>
+    </div>
+    <h1 ng-bind="item.title"></h1>
+    <p ng-bind="item.resume" ng-if="item.resume"></p>
+  </div>
+</div>
 
-      <!-- CARD STYLE -->
-      <div ng-if="isCard" class="item style-card" ng-repeat="(key, item) in items"
-           ng-click="goTo(item)">
-        <h1 ng-bind="item.title"></h1>
-        <p ng-bind="item.resume" ng-if="item.resume"></p>
-        <p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>
-        <!--<m-img ng-src="{{item.image | mEncoder:'crop':70:114}}" img-resize>-->
-          <m-img encode="true" src="item.image"></m-img>
-      </div>
-      <!-- LIST ITEM -->
-      <div ng-if="isList" class="item style-list" ng-repeat="(key, item) in items"
-           ng-click="goTo(item)">
-        <div class="img-container" ng-if="isList">
-          <m-img encode="true" src="item.image"></m-img>
-        </div>
-        <h1 ng-bind="item.title"></h1>
-        <p ng-bind="item.resume" ng-if="item.resume"></p>
-      </div>
-    </div>
-    <!-- Detail -->
-    <div ng-if="isDetail" class="iframe-container">
-      <!-- <u-frame-directive trustedurl="detail"> -->
-				<!-- data-tap-disabled="true" -->
-				<iframe
-	      ng-src="{{ trustedUrl }}"
-	      scrolling="yes"
-	      id="form"
-	      >
-      </iframe>
-    </div>
-    </div>
-  <!--</m-content>
-</m-moblet>-->
+<!-- Detail -->
+<div class="detail iframe-holder" ng-if="isDetail">
+  <iframe src="{{detail.url}}"></iframe>
+  <!-- <u-frame-directive trustedurl="detail.url"> -->
+</div>
+</div>
