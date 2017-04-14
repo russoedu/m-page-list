@@ -1,6 +1,6 @@
 <!-- LIST -->
 <div class="list" ng-if="!isDetail">
-  <div ng-class="{ 'style-card': isCard, 'style-list': isList }" class="item style-card" ng-repeat="(key, item) in items" ng-click="goTo(item)">
+  <div ng-class="{ 'layout-card': isCardLayout, 'layout-default': isDefaultLayout }" class="item style-card" ng-repeat="(key, item) in items" ng-click="goTo(item)">
     <h1 ng-bind="item.title"></h1>
     <p ng-bind="item.resume" ng-if="item.resume"></p>
     <p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>

@@ -28,7 +28,7 @@
     "label": "List style",
     "hint": "Choose the content list style",
     "placeholder": "Choose a style",
-    "list_type_1": "Default list",
-    "list_type_2": "Card list"
+    "list_type_default": "Default list",
+    "list_type_card": "Card list"
   }
 }

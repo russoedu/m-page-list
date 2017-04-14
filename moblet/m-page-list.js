@@ -34,6 +34,8 @@ module.exports = {
         if (isDefined(data)) {
           $scope.error = false;
           $scope.emptyData = false;
+          $scope.isDefaultLayout = data.listStyle === 'layout-default';
+          $scope.isCardLayout = data.listStyle === 'layout-card';
 
           // If it was called from the "more" function, concatenate the items
           $scope.items = (more) ? $scope.items.concat(data.items) : data.items;

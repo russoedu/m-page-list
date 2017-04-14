@@ -30,8 +30,8 @@
       "type": "select",
       "required": true,
       "values": {
-        "layout-1": "list_type_1",
-        "layout-2": "list_type_2"
+        "layout-default": "list_type_default",
+        "layout-card": "list_type_card"
       }
     }
   ]
