@@ -5,22 +5,20 @@ module.exports = {
   template: 'm-page-list.html',
   i18n: {
     pt: "lang/pt-BR.json",
-    en: "lang/en-US.json"
+    en: "lang/en-US.json",
+    es: "lang/es-ES.json"
   },
   link: function() {},
   controller: function(
     $scope,
     $rootScope,
     $filter,
-    $timeout,
     $mAppDef,
     $mState,
     $mWebview,
     $stateParams,
-    $mPageDef,
     $mPlatform,
     $mDataLoader,
-    $cordovaNetwork,
     $state,
     $sce
   ) {
@@ -104,22 +102,6 @@ module.exports = {
             list.load(false, function() {
               list.showDetail();
             });
-          // } else if ($mPlatform.isWebView()) {
-          //   $scope.detail = $scope.items[itemIndex];
-          //   var id = $stateParams.pageId;
-          //   var url = $scope.detail.url;
-          //   var colors = $mAppDef.color();
-          //   var page = $mPageDef(id).page();
-          //   console.log(page);
-          //   var params = $stateParams;
-          //   params.detail = '';
-          //
-          //   $scope.isWebView = true;
-          //   $mWebview.open(id, url, "_web", undefined, page.name,
-          //       colors.navigation_color, colors.header_color, $filter('translate')("loading"), false, {
-          //         state: $state.current.name,
-          //         params: params
-          //       });
           } else {
             $scope.title = $scope.items[itemIndex].title;
             $scope.detail = $scope.items[itemIndex];

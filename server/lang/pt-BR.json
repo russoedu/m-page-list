@@ -23,5 +23,12 @@
     "label": "URL",
     "hint": "Preencha com a URL da página web",
     "placeholder": "https://www.minhapagina.com.br"
+  },
+  "listStyle": {
+    "label": "Estilo da lista",
+    "hint": "Escolha o estilo da lista de conteúdos",
+    "placeholder": "Escolha um estilo",
+    "list_type_1": "Lista padrão",
+    "list_type_2": "Lista cartão"
   }
 }

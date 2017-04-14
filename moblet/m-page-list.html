@@ -1,18 +1,14 @@
 <!-- LIST -->
 <div class="list" ng-if="!isDetail">
-  <div class="item style-list" ng-repeat="(key, item) in items"
-       ng-click="goTo(item)">
-    <div class="img-container">
-      <m-img encode="true" src="item.image"></m-img>
-    </div>
+  <div ng-class="{ 'style-card': isCard, 'style-list': isList }" class="item style-card" ng-repeat="(key, item) in items" ng-click="goTo(item)">
     <h1 ng-bind="item.title"></h1>
     <p ng-bind="item.resume" ng-if="item.resume"></p>
+    <p ng-bind-html="stripHtml(item.description) | mCut:100" ng-if="!item.resume"></p>
   </div>
 </div>
 
 <!-- Detail -->
 <div class="detail iframe-holder" ng-if="isDetail">
   <iframe src="{{detail.url}}"></iframe>
-  <!-- <u-frame-directive trustedurl="detail.url"> -->
 </div>
 </div>
