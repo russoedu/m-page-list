@@ -79,40 +79,20 @@ m-page-list{
 
     }
   }
-  .detail {
-    position: relative;
-    .detail-container{
-      padding: 16px;
-      background-color: #fff;
-    }
-    h1 {
-      font-size: 17px;
-    }
-    h2 {
-      font-size: 16px;
-    }
-    h3 {
-      font-size: 15px;
-    }
-    h4, h5, h6 {
-      font-size: 14px;
-    }
-    .description {
-      table {
-        width: 100%;
-        tbody {
-          tr {
-            td {
-              border: 1px solid #b2b2b2;
-              min-width: 30px;
-              height: 31px;
-              padding: 5px;
-              vertical-align: middle;
-              line-height: 0px;
-            }
-          }
-        }
-      }
-    }
+  .iframe-holder {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+  }
+
+  .iframe-holder iframe {
+      height: 100%;
+      width: 100vw;
+      display: block;
+      overflow: hidden;
   }
 }
